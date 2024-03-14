@@ -1,13 +1,11 @@
 from modul import *
-kasutajad = []
-paroolid = []
-polzovateli = []
+from kasutajad import *
 while True:
     try:
         menu = int(input(" registreerimine - 1\n autoriseerimine - 2\n unustanud parooli taastamine - 3\n "))
         if menu == 1:
-            nimi = input("registreerimine: kirjutage oma nimi")
-            parool = input("registreerimine: kirjutage parool")
+            nimi = input("registreerimine: kirjutage oma nimi ")
+            parool = input("registreerimine: kirjutage parool ")
             zaregistr = registr(nimi, parool, kasutajad, paroolid)
             print("koik kasutajad", kasutajad)
         elif menu == 2:
@@ -24,14 +22,12 @@ while True:
                     else:
                         print("vale andmetuup")
         elif menu == 3:
-            email = input("kirjuta oma emaili")
+            #email = input("kirjuta oma emaili")
             unustanudPR(paroolid, kasutajad)
         else:
             print("vale andmetüüp")
     except ValueError:
         print("kirjutage ainult numbrit")
-
-
 
 
 
